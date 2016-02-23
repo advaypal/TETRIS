@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Tetris</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+	 	<div class="row">
+			<div id="canvas" class="col-md-6">
+				<div class="container">
+					<canvas id="board" width="320" height="640">
+						<p> Your browser does not suppot HTML5 canvas"</p>
+					</canvas>
+				</div>
+			</div>
+
+			<div class ="col-md-6">
+				<div class="container">
+					<h1> TETRIS </h1>
+				</div>
+				<div class="container">
+					<h4> Use arrow keys to play game </h4>
+					<h4> Up: Rotation </h4>
+					<h4> Left: Move left </h4>
+					<h4> Right: Move Right </h4>
+					<h4> Down: Speed Up Current Block </h4>
+					<h4> Press Esc to pause/play </h4>
+				</div>
+				<div id="game" class="container">
+					<button id = "start" type="button" class="btn btn-primary btn-lg">Start</button>
+				</div>
+				<div class="container">
+					<p id="score"> </p>
+				</div>
+				<div class = "container">
+					<p id="gameover"> </p>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<script type="text/javascript" src="js/jquery-1.12.0.js"></script>
+	<script type="text/javascript" src="js/Game.js"> </script>
+    <script type="text/javascript" src="js/Board.js"> </script>
+    <script type="text/javascript" src="js/Pieces.js"> </script>
+    <script type="text/javascript" src="js/logic.js"> </script>
+</body>
+</html>

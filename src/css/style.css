@@ -1,0 +1,13 @@
+#board {
+	border-style: solid;
+	border-color: blue;
+	background-color: black;
+	border-width: 0.5em;
+	border-radius: 0.5em;
+}
+h1 {
+	font-size: 5em;
+}
+body {
+	background-image: url("orange-burst.png");
+}
