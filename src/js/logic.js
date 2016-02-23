@@ -34,7 +34,7 @@ function update() {
     }
     gameState.currentTime = new Date().getTime();
     var c = 0;
-    if(gameState.currentTime - gameState.prevTime > gameState.timeinterval) {
+    if(gameState.currentTime - gameState.prevTime > gameState.timeInterval) {
         // update the game piece
         if(!gameState.isEndOfBlock()) {
             gameState.currentPieceObj.x+=1;
@@ -45,7 +45,7 @@ function update() {
             }
             c++;
             gameState.arr = [];
-            gameState.timeinterval = gameState.time;
+            gameState.timeInterval = gameState.time;
             gameState.getRandomPiece();
             gameState.currentPieceObj.x +=1;
         }
@@ -85,7 +85,7 @@ function eventHandle(e) {
         }
         break;
         case 40: // down
-        gameState.timeinterval = gameState.time/4;    
+        gameState.timeInterval = gameState.time/4;    
         break;
         default: return; // exit this handler for other keys
     }

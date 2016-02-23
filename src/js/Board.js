@@ -26,7 +26,8 @@ Board.prototype.insertPiece = function() {
 			}
 		}
 	}
-	for(var i =piece.length-1; i>=0; i--) {
+	var i = piece.length - 1;
+	while(i>=0) {
 		c=0;
 		for(var j = 0; j<this.columns;j++) {
 			if(this.board[x+i][j].data==0) {
@@ -35,6 +36,7 @@ Board.prototype.insertPiece = function() {
 		}
 		if(c==0) {
 			this.clearRow(x+i);
+			i++;
 			gameState.lines+=1;
 			$( "#score" ).replaceWith( "<h3 id='score'> Completed lines = "+gameState.lines+" </h3>" );
 		}
@@ -42,6 +44,7 @@ Board.prototype.insertPiece = function() {
 			gameState.isGameOver = true;
 			update();
 		}
+		i--;
 	}
 	
 }

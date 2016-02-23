@@ -8,7 +8,7 @@ function Game() {
     this.columns = 10;
 	this.arr = [];
 	this.time = 250;
-	this.timeinterval = this.time;
+	this.timeInterval = this.time;
 	this.currentTime= 0;
 	this.prevTime = 0;
 	this.isGameOver = false;
@@ -17,7 +17,7 @@ function Game() {
 	this.currentPieceObj = null;
 	this.getRandomPiece();
     this.isPaused = false;
-    $(document).keyup(function(e) { self.timeinterval = self.time;});
+    $(document).keyup(function(e) { self.timeInterval = self.time;});
 }
 Game.prototype.getRandomPiece = function() {
 	var result = Math.floor(Math.random()*7);
