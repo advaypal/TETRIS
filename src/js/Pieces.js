@@ -22,16 +22,14 @@ function PieceO(rows, columns) {
 }
 
 function PieceJ(rows, columns) {
-	this.state1= [[1,1,1,1],
-				  [0,0,0,1]];
-	this.state2= [[1,0,0,0],
-				  [1,1,1,1]];
+	this.state1= [[1,1,1],
+				  [0,0,1]];
+	this.state2= [[1,0,0],
+				  [1,1,1]];
 	this.state3= [[1,1],
-				  [1,0],
 				  [1,0],
 				  [1,0]];
 	this.state4= [[0,1],
-				  [0,1],
 				  [0,1],
 				  [1,1]];
 	this.states = [this.state1, this.state4, this.state2, this.state3];
@@ -43,16 +41,14 @@ function PieceJ(rows, columns) {
 }
 
 function PieceL(rows, columns) {
-	this.state1= [[1,1,1,1],
-				  [1,0,0,0]];
-	this.state2= [[0,0,0,1],
-				  [1,1,1,1]];
+	this.state1= [[1,1,1],
+				  [1,0,0]];
+	this.state2= [[0,0,1],
+				  [1,1,1]];
 	this.state3= [[1,0],
-				  [1,0],
 				  [1,0],
 				  [1,1]];
 	this.state4= [[1,1],
-				  [0,1],
 				  [0,1],
 				  [0,1]];
 	this.states = [this.state1, this.state4, this.state2, this.state3];
