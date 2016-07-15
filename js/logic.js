@@ -75,6 +75,7 @@ function eventHandle(e) {
         case 38: // up
         if(gameState.isValidMove(2)) {
             gameState.currentPieceObj.currentState= (gameState.currentPieceObj.currentState+1)%gameState.currentPieceObj.states.length;
+            gameState.currentPieceObj.y -= gameState.leftShiftValue();
             update();
         }
         break;

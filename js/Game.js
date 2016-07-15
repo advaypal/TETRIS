@@ -114,7 +114,7 @@ Game.prototype.isValidMove = function(key) {
         var newx = midx - (piece1[0].length)/2;
         var newy = midy - (piece1.length)/2;
         if(newy + piece1[0].length - 1 >= this.columns|| newy <0) {
-            return false;
+            return true;
         } else {
             for(var i = 0; i<piece1.length;i++) {
                 for(var j =0; j<piece1[i].length;  j++) {
@@ -147,6 +147,19 @@ Game.prototype.isValidMove = function(key) {
 
     }
 };
+
+Game.prototype.leftShiftValue = function() {
+    piece = this.currentPieceObj.states[this.currentPieceObj.currentState];
+    var y = this.currentPieceObj.y;
+    if(y + piece[0].length - 1 >= this.columns) {
+        return y + piece[0].length - this.columns;
+    } else if(y <0) {
+        return y;
+    } else {
+        return 0;
+    }
+
+}
 
 Game.prototype.isEndOfBlock = function() {
     piece = this.currentPieceObj.states[this.currentPieceObj.currentState];
