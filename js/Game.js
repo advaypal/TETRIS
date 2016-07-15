@@ -59,10 +59,10 @@ Game.prototype.drawPiece = function() {
         for(var j = 0; j<piece[i].length; j++) {
             if(this.canvasBoard.board[x+i][y+j].data!=1 && piece[i][j]==1) {
                 ctx.fillStyle = this.currentPieceObj.color;
-                ctx.fillRect((y+j)*size + 1, (x+i)*size + 1, size - 1, size - 1);
+                ctx.fillRect((y+j)*size + 1, (x+i)*size + 1, size - 2, size - 2);
                 this.arr[c++] = [(y+j)*size, (x+i)*size];
-                ctx.strokeStyle="white";
-                ctx.strokeRect((y+j)*size + 1, (x+i)*size + 1, size - 1, size - 1);
+                ctx.strokeStyle="black";
+                ctx.strokeRect((y+j)*size + 1, (x+i)*size + 1, size - 2, size - 2);
             } else if(this.canvasBoard.board[x+i][y+j].data==1 && piece[i][j]==1) {
                 this.isGameOver = true;
                 update();
@@ -79,7 +79,7 @@ Game.prototype.clear = function(x) {
 
 Game.prototype.undrawPiece = function() {
     for(var i = 0; i<this.arr.length;i++) {
-        ctx.clearRect(this.arr[i][0],this.arr[i][1], this.size+1, this.size+1);
+        ctx.clearRect(this.arr[i][0],this.arr[i][1], this.size, this.size);
     }
     this.arr = [];
 

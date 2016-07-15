@@ -50,21 +50,21 @@ Board.prototype.insertPiece = function() {
 }
 
 Board.prototype.clearRow= function(row) {
-	gameState.time -= 20;
+	gameState.time -= 15;
 	var size = gameState.size;
 	for(var i = row; i>0; i--) {
 		for(var j = 0; j<this.columns; j++) {
 		   this.board[i][j].data = this.board[i-1][j].data;
 		   this.board[i][j].color = this.board[i-1][j].color;
-		   ctx.clearRect(j*size+1, i*size+1, size, size)
+		   ctx.clearRect(j*size, i*size, size, size)
 		   ctx.fillStyle = this.board[i-1][j].color;
-           ctx.fillRect(j*size + 1, i*size + 1, size, size-1);
-           if(this.board[i-1][j].color!="black") {
-			ctx.strokeStyle="white";
-           } else {
+           ctx.fillRect(j*size + 1, i*size + 1, size - 2, size - 2);
+           //if(this.board[i-1][j].color!="black") {
+			//ctx.strokeStyle="white";
+           //} else {
            	ctx.strokeStyle="black";
-           }
-           ctx.strokeRect(j*size, i*size-1, size+1, size+1);
+           //}
+           ctx.strokeRect(j*size + 1, i*size + 1, size - 2, size - 2);
 		}
 	}
 };
